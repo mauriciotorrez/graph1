@@ -42,9 +42,9 @@ const DashboardLayout = ({ location }) => {
         <div className="content">
           <NavbarTop />
           <Switch>
-            <ProtectedRoute path="/customers" component={Customer} />
+            <Route path="/customers" component={Customer} />
             <ProtectedRoute path="/users" component={User} />
-            <ProtectedRoute path="/devices" component={Device} />
+            <Route path="/devices" component={Device} />
             <Route path="/dashboard-alt" exact component={DashboardAlt} />
             <Route path="/" />
           </Switch>

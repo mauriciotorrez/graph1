@@ -41,7 +41,7 @@ const Layout = () => {
         <Route path="/authentication/split" component={AuthSplitRoutes} />
         <Route path="/authentication/wizard" component={WizardLayout} />
         <Route path="/errors" component={ErrorLayout} />
-        <ProtectedRoute  component={DashboardLayout} />
+        <Route  component={DashboardLayout} />
         {/* <ProtectedRoute path="/users" rolesRequired={["ROLE_USER"]} component={Users} /> */}
       </Switch>
     </Router>

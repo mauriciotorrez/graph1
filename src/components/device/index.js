@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Redirect } from 'react-router-dom'
+import { Switch, Redirect, Route } from 'react-router-dom'
 import ProtectedRoute from '../utilities/ProtectedRoutes'
 import Edit from './Edit'
 import List from './List'
@@ -11,7 +11,7 @@ export const Index = () => (
         
         <Switch>
             <ProtectedRoute exact path="/devices/new" component={Edit} />
-            <ProtectedRoute exact path="/devices/track/:deviceId" component={Track} />
+            <Route exact path="/devices/track/:deviceId" component={Track} />
             <ProtectedRoute exact path="/devices" component={List} />
             <ProtectedRoute exact path="/devices/:deviceId" component={Edit} />
             <Redirect to="/errors/404" />
